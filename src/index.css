@@ -93,7 +93,7 @@
   }
 
   .section-padding-sm {
-    @apply max-lg:pt-28 max-lg:pb-[calc(8.5rem+env(safe-area-inset-bottom,0px))];
+    @apply max-lg:pt-20 max-lg:pb-[calc(8.5rem+env(safe-area-inset-bottom,0px))];
     @apply sm:pt-44 sm:pb-16;
     @apply lg:py-16;
   }

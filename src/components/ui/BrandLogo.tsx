@@ -15,12 +15,12 @@ export function BrandLogo({ className, onClick }: BrandLogoProps) {
       className={cn("inline-flex items-center gap-2 transition-opacity hover:opacity-80 active:scale-95 sm:gap-3", className)}
     >
       <span className="sm:hidden">
-        <BrandIcon size={32} />
+        <BrandIcon size={28} />
       </span>
       <span className="hidden sm:block">
         <BrandIcon size={36} />
       </span>
-      <span className="hidden text-xl font-bold tracking-tight text-white sm:inline">{siteConfig.brand}</span>
+      <span className="text-lg sm:text-xl font-bold tracking-tight text-white">{siteConfig.brand}</span>
     </a>
   );
 }

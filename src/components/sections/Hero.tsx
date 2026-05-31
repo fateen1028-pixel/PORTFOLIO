@@ -36,7 +36,7 @@ export function Hero() {
       <div 
         className="absolute inset-0 -z-20 opacity-20 select-none pointer-events-none"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop')",
+          backgroundImage: "url('/hero-bg.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           filter: "blur(8px)",
@@ -63,20 +63,8 @@ export function Hero() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="align-mobile-start flex w-full flex-col max-lg:pl-14 max-lg:text-left"
+            className="align-mobile-start flex w-full flex-col max-lg:text-left"
           >
-            {/* Pulsing Availability Beacon on Mobile */}
-            <motion.div 
-              variants={itemVariants} 
-              className="flex sm:hidden items-center gap-1.5 rounded-full border border-emerald-500/10 bg-emerald-500/5 px-2.5 py-0.5 text-[10px] font-semibold text-emerald-400 w-fit mb-4"
-            >
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-              </span>
-              Available for Internships
-            </motion.div>
-
             <motion.p variants={itemVariants} className="text-label mb-3 font-semibold tracking-widest text-zinc-500">
               {siteConfig.title}
             </motion.p>
@@ -93,7 +81,7 @@ export function Hero() {
               {siteConfig.tagline}
             </motion.p>
 
-            <motion.div variants={itemVariants} className="mt-8 flex w-full max-lg:flex-col max-lg:items-stretch flex-wrap items-center gap-x-4 gap-y-3 max-lg:gap-y-3 [&_a]:max-lg:w-full [&_a]:max-lg:justify-start sm:gap-y-4 lg:flex-row lg:[&_a]:w-auto">
+            <motion.div variants={itemVariants} className="mt-8 flex w-full flex-wrap items-center gap-x-3 gap-y-3 sm:gap-x-4 sm:gap-y-4 justify-start">
               <LinkButton href="#work">View work</LinkButton>
               <LinkButton variant="secondary" href={siteConfig.resume} target="_blank" rel="noopener noreferrer">
                 Resume
@@ -124,6 +112,13 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
+      </div>
+
+      {/* Bottom Wave Divider */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none [transform:translate3d(0,1px,0)] pointer-events-none z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className="relative block w-full h-[30px] sm:h-[60px] lg:h-[100px]">
+          <path fill="#09090b" fillOpacity="1" d="M0,64L80,90.7C160,117,320,171,480,170.7C640,171,800,117,960,85.3C1120,53,1280,43,1360,37.3L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
       </div>
     </section>
   );

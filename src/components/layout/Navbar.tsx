@@ -63,11 +63,22 @@ export function Navbar() {
         Skip to content
       </a>
 
+      {/* Top Translucent Bar (Appears on scroll) */}
+      <div 
+        className={cn(
+          "fixed inset-x-0 top-0 z-40 transition-all duration-300 pointer-events-none",
+          "h-16 sm:h-20", // Heights covering the logo area
+          isScrolled 
+            ? "bg-zinc-950/60 backdrop-blur-md border-b border-white/5 opacity-100" 
+            : "bg-transparent opacity-0"
+        )}
+      />
+
       {/* Fixed Logo - Top Left */}
       <div 
         className={cn(
           "fixed left-[max(1rem,env(safe-area-inset-left,0px))] top-[max(1rem,env(safe-area-inset-top,0px))] z-50 transition-opacity duration-300 sm:left-8 sm:top-8",
-           isScrolled ? "opacity-30 hover:opacity-100" : "opacity-100"
+           isScrolled ? "opacity-100" : "opacity-100"
         )}
       >
         <MagneticItem>
