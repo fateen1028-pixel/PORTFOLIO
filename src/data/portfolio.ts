@@ -12,7 +12,7 @@ export const siteConfig = {
   github: "https://github.com/fateen1028-pixel",
   linkedin: "https://linkedin.com/in/mohamed-fateen",
   resume: "/resume.pdf",
-  ogImage: "/og-image.svg",
+  ogImage: "https://fateen.dev/og-image.png",
   education: {
     degree: "B.E. Computer Science",
     status: "First Year — Currently Pursuing",
