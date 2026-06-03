@@ -12,17 +12,29 @@ import { siteConfig } from "@/data/portfolio";
 function App() {
   return (
     <>
-      <Helmet>
-        <title>Fateen · Backend Developer & AI Systems Builder</title>
-        <meta name="description" content={siteConfig.tagline} />
-        <meta
-          property="og:title"
-          content={`${siteConfig.name} | Backend Developer & AI Systems Builder`}
-        />
-        <meta property="og:description" content={siteConfig.tagline} />
-        <meta property="og:image" content={siteConfig.ogImage} />
-        <meta property="og:type" content="website" />
-      </Helmet>
+     <Helmet>
+  <title>Mohamed Fateen F | Backend Developer & AI Systems Builder</title>
+  <meta
+    name="description"
+    content={siteConfig.tagline}
+  />
+  <meta
+    property="og:title"
+    content="Mohamed Fateen F | Backend Developer & AI Systems Builder"
+  />
+  <meta
+    property="og:description"
+    content={siteConfig.tagline}
+  />
+  <meta
+    property="og:image"
+    content={siteConfig.ogImage}
+  />
+  <meta
+    property="og:type"
+    content="website"
+  />
+</Helmet>
 
       <Navbar />
       <main className="w-full min-w-0 max-lg:overflow-x-clip">
